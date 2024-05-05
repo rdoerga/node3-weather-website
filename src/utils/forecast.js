@@ -8,7 +8,7 @@ const forecast = (latitude,longitude,callback) => {
         } else if (body.current === undefined){
             callback('unable to find weather for location ',undefined)
         } else {
-            callback(undefined, 'temp feels like: '+body.current.feelslike)
+            callback(undefined, 'temp feels like: '+body.current.feelslike+', the UV-index is '+body.current.uv_index)
         }
     })
     
